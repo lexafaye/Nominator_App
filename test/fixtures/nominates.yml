@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yourname: 
+  yourbiz: 
+  youremail: 
+  referralname: 
+  referralbiz: 
+  referralemail: 
+  referralstate: MyText
+
+two:
+  yourname: 
+  yourbiz: 
+  youremail: 
+  referralname: 
+  referralbiz: 
+  referralemail: 
+  referralstate: MyText

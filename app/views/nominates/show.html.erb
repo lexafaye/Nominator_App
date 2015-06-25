@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Yourname:</strong>
+  <%= @nominate.yourname %>
+</p>
+
+<p>
+  <strong>Yourbiz:</strong>
+  <%= @nominate.yourbiz %>
+</p>
+
+<p>
+  <strong>Youremail:</strong>
+  <%= @nominate.youremail %>
+</p>
+
+<p>
+  <strong>Referralname:</strong>
+  <%= @nominate.referralname %>
+</p>
+
+<p>
+  <strong>Referralbiz:</strong>
+  <%= @nominate.referralbiz %>
+</p>
+
+<p>
+  <strong>Referralemail:</strong>
+  <%= @nominate.referralemail %>
+</p>
+
+<p>
+  <strong>Referralstate:</strong>
+  <%= @nominate.referralstate %>
+</p>
+
+<%= link_to 'New Nominate', new_nominate_path %>
+<%= link_to 'Edit', edit_nominate_path(@nominate) %> |
+<%= link_to 'Back', nominates_path %>

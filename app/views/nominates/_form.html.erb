@@ -1,0 +1,42 @@
+<%= form_for(@nominate) do |f| %>
+  <% if @nominate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nominate.errors.count, "error") %> prohibited this nominate from being saved:</h2>
+
+      <ul>
+      <% @nominate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label 'Your Name' %><br>
+    <%= f.text_field :yourname %>
+  </div>
+  <div class="field">
+    <%= f.label 'Your Company Name' %><br>
+    <%= f.text_field :yourbiz %>
+  </div>
+  <div class="field">
+    <%= f.label 'Your Email' %><br>
+    <%= f.text_field :youremail %>
+  </div>
+  <div class="field">
+    <%= f.label 'Referral Name' %><br>
+    <%= f.text_field :referralname %>
+  </div>
+  <div class="field">
+    <%= f.label 'Referral Company Name' %><br>
+    <%= f.text_field :referralbiz %>
+  </div>
+  <div class="field">
+    <%= f.label 'Referral Email' %><br>
+    <%= f.text_field :referralemail %>
+  </div>
+  <div class="field">
+    <%= f.label 'Referral State'%><br>
+   <%=select_tag 'State', options_for_select(us_states),:name=>"state",:id=>"state"%>
+  </div>
+<% end %>
