@@ -12,32 +12,36 @@
   <% end %>
 
   <div class="field">
-    <%= f.label 'Your First Name' %><br>
-    <%= f.text_field :yourname %>
+    <%= f.label 'Your First Name*' %><br>
+    <%= f.text_field :yourname, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label 'Your Last Name' %><br>
-    <%= f.text_field :lastname %>
+    <%= f.label 'Your Last Name*' %><br>
+    <%= f.text_field :lastname, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label 'Your Company Name' %><br>
-    <%= f.text_field :yourbiz %>
+    <%= f.label 'Your Company Name*' %><br>
+    <%= f.text_field :yourbiz, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label 'Your Email' %><br>
-    <%= f.text_field :youremail %>
+    <%= f.label 'Your Email*' %><br>
+    <%= f.text_field :youremail, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label 'Referral Name' %><br>
-    <%= f.text_field :referralname %>
+    <%= f.label 'Referral First Name*' %><br>
+    <%= f.text_field :referralname, :required => true  %>
+  </div>
+<div class="field">
+    <%= f.label 'Referral Last Name*' %><br>
+    <%= f.text_field :referrallastname, :required => true  %>
+  </div
+    <div class="field">
+    <%= f.label 'Referral Company Name*' %><br>
+    <%= f.text_field :referralbiz, :required => true  %>
   </div>
   <div class="field">
-    <%= f.label 'Referral Company Name' %><br>
-    <%= f.text_field :referralbiz %>
-  </div>
-  <div class="field">
-    <%= f.label 'Referral Email' %><br>
-    <%= f.text_field :referralemail %>
+    <%= f.label 'Referral Email*' %><br>
+    <%= f.text_field :referralemail, :required => true  %>
   </div>
   <div class="field">
     <%= f.label 'Referral State'%><br>
