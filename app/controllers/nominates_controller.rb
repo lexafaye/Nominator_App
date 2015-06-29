@@ -1,6 +1,8 @@
 class NominatesController < ApplicationController
   before_action :set_nominate, only: [:show, :edit, :update, :destroy]
+before_filter :authorize_admin, only: :index
 
+ 
   # GET /nominates
   # GET /nominates.json
   def index

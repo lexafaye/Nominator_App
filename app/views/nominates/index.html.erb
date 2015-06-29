@@ -8,7 +8,8 @@
 <table>
   <thead>
     <tr>
-      <th>Alumni Name</th>
+      <th>Alumni First Name</th>
+      <th>Alumni Last Name</th>
       <th>Alumni Company</th>
       <th>Alumni Email</th>
       <th>Referral Name</th>
@@ -23,6 +24,7 @@
     <% @nominates.each do |nominate| %>
       <tr>
         <td><%= nominate.yourname %></td>
+        <td><%= nominate.lastname %></td>
         <td><%= nominate.yourbiz %></td>
         <td><%= nominate.youremail %></td>
         <td><%= nominate.referralname %></td>

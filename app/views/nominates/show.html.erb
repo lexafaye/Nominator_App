@@ -1,40 +1,47 @@
 <p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Yourname:</strong>
+  <strong>Your First Name:</strong>
   <%= @nominate.yourname %>
 </p>
 
 <p>
-  <strong>Yourbiz:</strong>
+  <strong>Your Last Name</strong>
   <%= @nominate.yourbiz %>
 </p>
 
 <p>
-  <strong>Youremail:</strong>
-  <%= @nominate.youremail %>
+  <strong>Your Company Name:</strong>
+  <%= @nominate.yourbiz %>
 </p>
 
 <p>
-  <strong>Referralname:</strong>
+  <strong>Your Email:</strong>
+  <%= @nominate.youremail %>
+</p>
+<br>
+<br>
+<br>
+<p>
+  <strong>Referral Name:</strong>
   <%= @nominate.referralname %>
 </p>
 
 <p>
-  <strong>Referralbiz:</strong>
+  <strong>Referral Company Name:</strong>
   <%= @nominate.referralbiz %>
 </p>
 
 <p>
-  <strong>Referralemail:</strong>
+  <strong>Referral Email:</strong>
   <%= @nominate.referralemail %>
 </p>
 
 <p>
-  <strong>Referralstate:</strong>
+  <strong>Referral Company State:</strong>
   <%= @nominate.referralstate %>
 </p>
-
-<%= link_to 'New Nominate', new_nominate_path %>
-<%= link_to 'Edit', edit_nominate_path(@nominate) %> |
-<%= link_to 'Back', nominates_path %>
+<br>
+<br>
+<p><%= link_to 'Nominate Another Business?', new_nominate_path %></p>
+<p><%= link_to 'Edit', edit_nominate_path(@nominate) %> </p>
+<p><%= link_to 'Back', nominates_path %></p>
