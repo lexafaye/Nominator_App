@@ -87,13 +87,42 @@ end
 
     respond_to do |format|
       if @nominate.save
-        format.html { redirect_to @nominate, notice: 'You have successfully nominated @nominate.referralbiz.' }
-        format.json { render :show, status: :created, location: @nominate }
-  
-        format.html { render :new }
+        format.html { redirect_to @nominate, notice: 'You have successfully nominated #{@nominate.referralbiz}.' }
+        format.json { render :show, status: :created, location: @nominate }   
+  require 'mandrill'
+  begin 
+   mandrill = Mandrill::API.new "JZITQf3nJBSKkU34v5krHA"
+    message = {
+     :subject=> "You have been Nominated by #{@nominate.yourname} #{@nominate.yourlastname}!", 
+     :from_name=> "Goldman Sachs 10KSB",
+      :from_email=> "10ksb@icic.org",
+      :to=> [{
+            "email"=> @nominate.referralemail,
+            "name"=> @nominate.referralname }],
+      :cc=> [{
+            "email"=> @nominate.youremail,
+            "name"=> @nominate.yourname}],
+      :html=> render_to_string('emails/nominate', :locals => {nominate: @nominate}, :layout => false),        
+      # #:attachments=>
+      #   [{"type"=>"text/plain",
+      #       "content"=>"ZXhhbXBsZSBmaWxl",
+      #      "name"=>"myfile.txt"}],
+     :preserve_recipients => false
+     }
+   async = false
+   result = mandrill.messages.send message, async
+
+  rescue Mandrill::Error => e
+     # Mandrill errors are thrown as exceptions
+     puts "A mandrill error occurred: #{e.class} - #{e.message}"
+     # A mandrill error occurred: Mandrill::UnknownSubaccountError - No subaccount exists with the id 'customer-123'    
+     raise
+ end
+      else  
+       format.html { render :new }
         format.json { render json: @nominate.errors, status: :unprocessable_entity }
       end
-    end
+   end
   end
 
   # PATCH/PUT /nominates/1
