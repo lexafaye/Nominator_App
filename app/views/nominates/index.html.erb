@@ -4,7 +4,12 @@
 
 
 <h1>Nomination Tracker</h1>
-
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+</style>
 <table>
   <thead>
     <tr>
@@ -40,5 +45,4 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
+<%= link_to 'Nominate', new_nominate_path %>

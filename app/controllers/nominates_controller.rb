@@ -1,7 +1,6 @@
 class NominatesController < ApplicationController
   before_action :set_nominate, only: [:show, :edit, :update, :destroy]
-before_filter :authorize_admin, only: :index
-
+  before_filter :authorize_admin, only: :index
 
   # GET /nominates
   # GET /nominates.json
@@ -93,7 +92,7 @@ end
   begin 
    mandrill = Mandrill::API.new "JZITQf3nJBSKkU34v5krHA"
     message = {
-     :subject=> "You have been Nominated by #{@nominate.yourname} #{@nominate.yourlastname}!", 
+     :subject=> "You have been Nominated by #{@nominate.yourname} #{@nominate.lastname}!", 
      :from_name=> "Goldman Sachs 10KSB",
       :from_email=> "10ksb@icic.org",
       :to=> [{
@@ -102,15 +101,15 @@ end
       :cc=> [{
             "email"=> @nominate.youremail,
             "name"=> @nominate.yourname}],
-      :html=> render_to_string('emails/nominate', :locals => {nominate: @nominate}, :layout => false),        
+      :html=> render_to_string('emails/nominate', :locals => {:nominate => @nominate, :layout => false}),        
       # #:attachments=>
       #   [{"type"=>"text/plain",
       #       "content"=>"ZXhhbXBsZSBmaWxl",
       #      "name"=>"myfile.txt"}],
      :preserve_recipients => false
      }
-   async = false
-   result = mandrill.messages.send message, async
+   
+   result = mandrill.messages.send message
 
   rescue Mandrill::Error => e
      # Mandrill errors are thrown as exceptions
@@ -157,6 +156,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def nominate_params
-      params.require(:nominate).permit(:yourname, :yourbiz, :youremail, :referralname, :referralbiz, :referralemail, :referralstate)
+      params.require(:nominate).permit(:yourname, :lastname, :yourbiz, :youremail, :referralname, :referrallastname, :referralbiz, :referralemail, :referralstate)
     end
 end
