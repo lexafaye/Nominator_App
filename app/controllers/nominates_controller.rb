@@ -101,7 +101,7 @@ end
       :cc=> [{
             "email"=> @nominate.youremail,
             "name"=> @nominate.yourname}],
-      :html=> render_to_string('emails/nominate', :locals => {:nominate => @nominate, :layout => false}),        
+      :html=> render_to_string('emails/nominate', :locals => {:nominate => @nominate}, :layout => false),        
       # #:attachments=>
       #   [{"type"=>"text/plain",
       #       "content"=>"ZXhhbXBsZSBmaWxl",
@@ -109,7 +109,7 @@ end
      :preserve_recipients => false
      }
    
-   result = mandrill.messages.send message
+  result = mandrill.messages.send message
 
   rescue Mandrill::Error => e
      # Mandrill errors are thrown as exceptions
