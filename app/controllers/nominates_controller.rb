@@ -156,6 +156,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def nominate_params
-      params.require(:nominate).permit(:yourname, :lastname, :yourbiz, :youremail, :referralname, :referrallastname, :referralbiz, :referralemail, :referralstate)
+      params.require(:nominate).permit(:yourname, :lastname, :yourbiz, :youremail, :referralname, :referrallastname, :referralbiz, :referralemail, :state)
     end
 end

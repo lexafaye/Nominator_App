@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label 'Your First Name*' %><br>
     <%= f.text_field :yourname, :required => true  %>
@@ -31,10 +30,10 @@
     <%= f.label 'Referral First Name*' %><br>
     <%= f.text_field :referralname, :required => true  %>
   </div>
-<div class="field">
+  <div class="field">
     <%= f.label 'Referral Last Name*' %><br>
     <%= f.text_field :referrallastname, :required => true  %>
-  </div
+  </div>
     <div class="field">
     <%= f.label 'Referral Company Name*' %><br>
     <%= f.text_field :referralbiz, :required => true  %>
@@ -45,8 +44,9 @@
   </div>
   <div class="field">
     <%= f.label 'Referral State'%><br>
-   <%=select_tag 'State', options_for_select(us_states),:name=>"state",:id=>"state"%>
+   <%=f.select :state, options_for_select(us_states) %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
