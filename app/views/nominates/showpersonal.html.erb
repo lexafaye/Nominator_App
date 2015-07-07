@@ -1,0 +1,44 @@
+
+<h1>My Personal Nomination Tracker</h1>
+<style>
+table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Alumni First Name</th>
+      <th>Alumni Last Name</th>
+      <th>Alumni Company</th>
+      <th>Alumni Email</th>
+      <th>Referral First Name</th>
+      <th>Referral Last Name</th>
+      <th>Referral Company</th>
+      <th>Referral Email</th>
+      <th>Referral State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nominates.each do |nominate| %>
+      <tr>
+        <td><%= nominate.yourname %></td>
+        <td><%= nominate.lastname %></td>
+        <td><%= nominate.yourbiz %></td>
+        <td><%= nominate.youremail %></td>
+        <td><%= nominate.referralname %></td>
+        <td><%= nominate.referrallastname %></td>
+        <td><%= nominate.referralbiz %></td>
+        <td><%= nominate.referralemail %></td>
+        <td><%= nominate.state %></td>
+        <td><%= link_to 'Show', nominate %></td>
+        <td><%= link_to 'Edit', edit_nominate_path(nominate) %></td>
+        <td><%= link_to 'Destroy', nominate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to 'Nominate', new_nominate_path %>

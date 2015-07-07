@@ -1,14 +1,21 @@
 class NominatesController < ApplicationController
   before_action :set_nominate, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize_admin, only: :index
 
   # GET /nominates
   # GET /nominates.json
   def index
-    @nominates = Nominate.all
+    if current_user.admin?
+      @nominates = Nominate.all
+      respond_to do |format|
+      format.html
+      format.csv { send_data @nominates.to_csv }
+      format.xls 
+    end
+  else
+      @nominates = current_user.nominates
   end
 
-
+  end
   # GET /nominates/1
   # GET /nominates/1.json
   def show
@@ -83,7 +90,7 @@ end
   # POST /nominates.json
   def create
     @nominate = Nominate.new(nominate_params)
-
+    @nominate.user_id = current_user.id
     respond_to do |format|
       if @nominate.save
         format.html { redirect_to @nominate, notice: 'You have successfully nominated #{@nominate.referralbiz}.' }
