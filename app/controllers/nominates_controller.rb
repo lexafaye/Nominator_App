@@ -7,9 +7,9 @@ class NominatesController < ApplicationController
     if current_user.admin?
       @nominates = Nominate.all
       respond_to do |format|
-      format.html
-      format.csv { send_data @nominates.to_csv }
-      format.xls 
+        format.html
+        format.csv { send_data @nominates.to_csv }
+        format.xls 
     end
   else
       @nominates = current_user.nominates

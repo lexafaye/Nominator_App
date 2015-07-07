@@ -6,8 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-<body>
+<div class="content">
 <% if user_signed_in? %>
   <%= link_to('Edit Preferences', edit_user_registration_path) %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -15,13 +16,32 @@
   <%= link_to('Register', new_user_registration_path)  %> or
   <%= link_to('Login', new_user_session_path)  %>  
 <% end %>
-
+<br>
 <% flash.each do |key,value| %>
 	<div class="errorbox">
 		<%= value %>
 	</div>
 	<% end %>
 <%= yield %>
+</div>
+<div class="navbar">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <ul>
+    <li> <%= link_to 'My Nominations', nominates_path, class: 'navlink'%>
+    </li>
+    <br>
+    <br>
+    <li>
+      <%= link_to 'Nominate', new_nominate_path, class: 'navlink' %>
+    </li>
+  </ul>
+</div>
 
 </body>
 </html>

@@ -8,6 +8,7 @@
 table, th, td {
     border: 1px solid black;
     padding: 5px;
+    margin-top: 50px;
 }
 </style>
 <table>
@@ -45,4 +46,10 @@ table, th, td {
     <% end %>
   </tbody>
 </table>
-<%= link_to 'Nominate', new_nominate_path %>
+<br>
+<br>
+<p>
+  Download:
+  <%= link_to "CSV", nominates_path(format: "csv") %>
+  <%= link_to "Excel", nominates_path(format: "xls") %>
+</p>
