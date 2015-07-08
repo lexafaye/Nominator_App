@@ -1,3 +1,7 @@
+.logo {
+  margin-top: 10px;
+}
+
 .errorbox {
 	color: red;
 	font-style:bold;
@@ -7,17 +11,9 @@
 	padding-bottom: 5px;
 
 }
-.nominate {
-	background-color: #7299C6;
-    position: relative;
-    max-width: 1000px;
-    padding: 10px;
-    border: 1px solid navy;
-    ;
-}
 
 .header {
-  color: #505050;height: 50px;
+  height: 50px;
   margin-left: auto;
   margin-right: auto;
   max-width: 400px;
@@ -28,6 +24,20 @@
   text-align: center;
 }
 
+.content {
+    min-height:1000px;
+    display: block;
+    margin-left: 242px; /*width of nav bar*/
+}
+
+.nominate {
+	  background-color: #607288;
+    position: relative;
+    max-width: 1000px;
+    padding: 10px;
+    border: 1px solid navy;
+    font-family:Arial;
+}
 
 *{
     margin:0;padding:0;
@@ -38,19 +48,28 @@
     left: 0;
     top: 0;
     bottom: 0;
-    width: 175px;
+    width: 240px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
 }
-.content {
-    min-height:1000px;
-    display: block;
-    margin-left: 200px; /*width of nav bar*/
+
+.navlink:hover {
+     background:#7398C5;
+     padding-bottom:13px;
+     padding-top:17px;
+     padding-left:10px;
+     padding-right:10px;
 }
 
   .navlink {
-  font: Verdana, sans-serif;
+  display: block;
+  background:#607288;
+  padding-bottom:13px;
+  padding-top:17px;
+  padding-left:10px;
+  padding-right:10px; 
+  font: Arial;
   color: white;
-  margin: 10px;
-  padding: 5px;
   list-style: square;
 }
 

@@ -25,20 +25,21 @@
 <%= yield %>
 </div>
 <div class="navbar">
-  <br>
-  <br>
+  <div class="logo">
+  <img src="https://www.10ksbapply.com/sites/all/themes/tenk/logo.png" alt="" id="logo">
+</div>
   <br>
   <br>
   <br>
   <br>
   <br>
   <ul>
-    <li> <%= link_to 'My Nominations', nominates_path, class: 'navlink'%>
+    <li> <%= link_to 'MY NOMINATIONS', nominates_path, class: 'navlink'%>
     </li>
     <br>
     <br>
     <li>
-      <%= link_to 'Nominate', new_nominate_path, class: 'navlink' %>
+      <%= link_to 'NOMINATE', new_nominate_path, class: 'navlink' %>
     </li>
   </ul>
 </div>
