@@ -2,13 +2,19 @@
 
 <!-- THIS IS ADMIN ONLY  -->
 
-
-<h1>Nomination Tracker</h1>
+<h1 class="header">Nomination Tracker</h1>
 <style>
 table, th, td {
-    border: 1px solid black;
-    padding: 5px;
-    margin-top: 50px;
+    background-color: #607288;
+    width: 95px;
+    height: 20px;
+    margin-left: 20px;
+    padding: 2px;
+    font-family:Arial;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    position: relative;
+    table-layout:fixed;
 }
 </style>
 <table>
@@ -39,9 +45,9 @@ table, th, td {
         <td><%= nominate.referralbiz %></td>
         <td><%= nominate.referralemail %></td>
         <td><%= nominate.state %></td>
-        <td><%= link_to 'Show', nominate %></td>
+        <!--<td><%= link_to 'Show', nominate %></td>
         <td><%= link_to 'Edit', edit_nominate_path(nominate) %></td>
-        <td><%= link_to 'Destroy', nominate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', nominate, method: :delete, data: { confirm: 'Are you sure?' } %> </td>-->
       </tr>
     <% end %>
   </tbody>

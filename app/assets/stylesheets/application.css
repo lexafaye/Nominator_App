@@ -5,18 +5,15 @@
 .errorbox {
 	color: red;
 	font-style:bold;
-	border-style: dotted;
-	text-align:center;
-	padding-top: 5px;
-	padding-bottom: 5px;
-
+  text-align: center;
 }
 
 .header {
   height: 50px;
-  margin-left: auto;
+  margin-top: 50px;
+  margin-left: 40px;
   margin-right: auto;
-  max-width: 400px;
+  max-width: 300px;
   min-width: 750px;
   position: relative;
   line-height: 1;
@@ -24,19 +21,35 @@
   text-align: center;
 }
 
+.headertext {
+  color: white;
+}
 .content {
+    background: url(https://photos-1.dropbox.com/t/2/AABWHqbPvvyz7U7lJaECwsM3xtAsTTi7RQl8ptPiru9RSA/12/6383018/jpeg/32x32/1/_/1/2/Angelica.NOLA.jpg/EOmv4QQYt7IBIAIoAg/gCi7vJpDy_z4XLrkF39xT4YETHpB9WQN7mMn92voI0s?size=1024x768&size_mode=2) no-repeat center center fixed; 
+    background-size: cover;
+    background-size: cover;
+    background-size: cover;
+    background-size: cover;
     min-height:1000px;
     display: block;
-    margin-left: 242px; /*width of nav bar*/
+    margin-left: 240px; /*width of nav bar*/
 }
 
 .nominate {
 	  background-color: #607288;
-    position: relative;
-    max-width: 1000px;
+    width: 700px;
+    height: 700px;
+    margin-left: 60px;
     padding: 10px;
-    border: 1px solid navy;
     font-family:Arial;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.nominateform {
+  position: relative;
+  margin-top: -680px;
+  margin-left: 100px;
 }
 
 *{
@@ -49,8 +62,6 @@
     top: 0;
     bottom: 0;
     width: 240px;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
 }
 
 .navlink:hover {
@@ -70,25 +81,21 @@
   padding-right:10px; 
   font: Arial;
   color: white;
-  list-style: square;
+  text-decoration: none;
+}
+
+.login {
+  background-color: #7398C5;
+}
+
+.logincontent {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 100px;
+  padding: 100px;
 }
 
 /*
-#cssmenu a {
-  background: #333;
-  border-bottom: 1px solid #393939;
-  color: #ccc;
-  display: block;
-  margin: 0;
-  padding: 8px 12px;
-  text-decoration: none;
-  font-weight: normal;
-}
-#cssmenu a:hover {
-  background: #2580a2 url("images/hover.gif") left center no-repeat;
-  color: #fff;
-  padding-bottom: 8px;
-}
 
 
  * This is a manifest file that'll be compiled into application.css, which will include all the files
