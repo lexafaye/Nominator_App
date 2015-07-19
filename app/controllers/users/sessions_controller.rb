@@ -5,7 +5,7 @@ class Users::SessionsController < Devise::SessionsController
   def new
      @content_class="login"
      super
-   end
+  end
 
   # POST /resource/sign_in
   # def create

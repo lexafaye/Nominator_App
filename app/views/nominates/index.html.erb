@@ -2,17 +2,21 @@
 
 <!-- THIS IS ADMIN ONLY  -->
 
-<h1 style="margin-top: 80px; margin-left: 50px; color: white">Nomination Tracker</h1>
+<h2 style="margin-top: 85px; margin-left: 270px; color: white">My Nominations</h1>
 <style>
 table, th, td {
-    background-color: #607288;
-    width: 120px;
+    background-color: #383838;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-color: #383838;
+    width: 100px;
     height: 20px;
-    margin-left: 20px;
-    padding: 10px;
+    margin-left: 270px;
+    padding: 6px;
     font-family:Arial;
-    opacity: 0.9;
-    filter: alpha(opacity=90);
+    color: white;
+    opacity: 0.93;
+    filter: alpha(opacity=93);
     position: relative;
     text-align:center;
 }
@@ -20,14 +24,13 @@ table, th, td {
 <table>
   <thead>
     <tr>
-      <th>Alumni Name</th>
-      <th>Alumni Company</th>
-      <th>Alumni Email</th>
+      <th>Nominator Name</th>
+      <th>Nominator Company</th>
+      <th>Nominator Email</th>
       <th>Referral Name</th>
       <th>Referral Company</th>
       <th>Referral Email</th>
       <th>Referral State</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -51,8 +54,7 @@ table, th, td {
   </tbody>
 </table>
 <br>
-<br>
-<p style= "margin-left:50px; color:white">
+<p style= "margin-left:280px; color:white">
   Download:
   <%= link_to "CSV", nominates_path(format: "csv") %>
   <%= link_to "Excel", nominates_path(format: "xls") %>

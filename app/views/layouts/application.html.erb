@@ -6,9 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-
+<!--<%= @content_class %> -->
 <body>
-<div class="content <%= @content_class %>">
+<div class="content">
+<div class="logincontent">
 <% if user_signed_in? %>
   <%= link_to('Edit Preferences', edit_user_registration_path) %>
   <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
@@ -16,6 +17,7 @@
   <%= link_to('Register', new_user_registration_path)  %> or
   <%= link_to('Login', new_user_session_path)  %>  
 <% end %>
+</div>
 <br>
 <% flash.each do |key,value| %>
 	<div class="errorbox">
@@ -24,24 +26,31 @@
 	<% end %>
 <%= yield %>
 </div>
+
 <div class="navbar">
   <div class="logo">
   <img src="https://www.10ksbapply.com/sites/all/themes/tenk/logo.png" alt="" id="logo">
-</div>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <ul>
-    <li> <%= link_to 'MY NOMINATIONS', nominates_path, class: 'navlink'%>
-    </li>
+  </div>
     <br>
     <br>
-    <li>
-      <%= link_to 'NOMINATE', new_nominate_path, class: 'navlink' %>
-    </li>
-  </ul>
+    <br>
+    <br>
+    <br>
+    <ul>
+      <li> 
+        <%= link_to 'NOMINATE', new_nominate_path, class: 'navlink' %>
+      </li>
+      <br>
+      <br>
+      <li>
+        <%= link_to 'MY NOMINATIONS', nominates_path, class: 'navlink'%>
+      </li>
+      <br>
+      <br>
+      <li class= navlink>
+       <%= 'ALUMNI DATABASE'%>
+      </li>
+    </ul>
 </div>
 
 </body>

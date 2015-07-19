@@ -1,19 +1,36 @@
+
 .logo {
   margin-top: 10px;
 }
 
 .errorbox {
-	color: red;
-	font-style:bold;
+  position: center;
+  background-color: red;
+  width: auto;
+  height: auto;
+  margin-left: 240px;
+  margin-top: 10px;
+	color: white;
+	font-weight: 700;
   text-align: center;
+  font-size: 18px;
+}
+
+.buttonclass {
+  background-color:#7398C5;
+  color: white;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+   font-family: 'oswald_regularregular';
+  border:none;
 }
 
 .header {
   height: 50px;
   margin-top: 50px;
-  margin-left: 40px;
-  margin-right: auto;
-  max-width: 300px;
+  max-width: 700px;
   min-width: 750px;
   position: relative;
   line-height: 1;
@@ -22,46 +39,57 @@
 }
 
 .headertext {
-  color: white;
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    background-color: #383838;
+    width: 810px;
+    height: 75px;
+    margin-left: 280px;
+    font-family: 'oswald_regularregular';
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }
+
 .content {
     background: url(https://photos-1.dropbox.com/t/2/AABWHqbPvvyz7U7lJaECwsM3xtAsTTi7RQl8ptPiru9RSA/12/6383018/jpeg/32x32/1/_/1/2/Angelica.NOLA.jpg/EOmv4QQYt7IBIAIoAg/gCi7vJpDy_z4XLrkF39xT4YETHpB9WQN7mMn92voI0s?size=1024x768&size_mode=2) no-repeat center center fixed; 
     background-size: cover;
-    background-size: cover;
-    background-size: cover;
-    background-size: cover;
     min-height:1000px;
     display: block;
-    margin-left: 240px; /*width of nav bar*/
+    /*margin-left: 240px; width of nav bar*/
 }
 
 .nominate {
-	  background-color: #607288;
-    width: 700px;
+	  background-color: #383838;
+    width: 790px;
     height: 700px;
-    margin-left: 60px;
+    margin-left: 280px;
     padding: 10px;
-    font-family:Arial;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
+    opacity: 0.9;
+    filter: alpha(opacity=90);
 }
 
 .nominateform {
   position: relative;
   margin-top: -680px;
-  margin-left: 100px;
+  margin-left: 300px;
+  color: white;
+  line-height:25px;
+   font-family: 'oswald_regularregular';
 }
 
 *{
     margin:0;padding:0;
 }
 .navbar {
-    background: white;
+    background: #cdcbcb;
     position: fixed;
     left: 0;
     top: 0;
     bottom: 0;
     width: 240px;
+    opacity: 0.95;
+    filter: alpha(opacity=95)
 }
 
 .navlink:hover {
@@ -74,27 +102,37 @@
 
   .navlink {
   display: block;
-  background:#607288;
+  background: white;
   padding-bottom:13px;
   padding-top:17px;
   padding-left:10px;
   padding-right:10px; 
-  font: Arial;
-  color: white;
+  font-style: bold;
+  font-size: 20px;
+  color: #383838;
+  font-family: 'oswald_regularregular';
   text-decoration: none;
   opacity: 0.7;
     filter: alpha(opacity=70);
 }
 
 .login {
-  background-color: #7398C5;
+  position: fixed;
+  margin-left: 300px;
+  margin-top: 130px;
+  color: white;
+  background-color: #383838;
+  width: 230px;
+  height: 280px;
+  padding: 10px;
+  font-family:Arial;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
 }
 
 .logincontent {
-  position: relative;
-  margin-top: 50px;
-  margin-left: 100px;
-  padding: 100px;
+  position: fixed;
+  margin-left: 290px;
   color: white;
 }
 

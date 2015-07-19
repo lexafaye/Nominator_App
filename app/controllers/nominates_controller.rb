@@ -93,7 +93,7 @@ end
     @nominate.user_id = current_user.id
     respond_to do |format|
       if @nominate.save
-        format.html { redirect_to @nominate, notice: 'You have successfully nominated #{@nominate.referralbiz}.' }
+        format.html { redirect_to @nominate, notice: 'You have successfully nominated <%=nominate.referralbiz>.' }
         format.json { render :show, status: :created, location: @nominate }   
   require 'mandrill'
   begin 
